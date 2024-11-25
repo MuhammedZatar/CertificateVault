@@ -1,0 +1,35 @@
+<nav class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 shadow-lg">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Brand -->
+    <a href="/" class="text-2xl font-bold tracking-wide">
+      CertVault
+    </a>
+
+    <!-- Links -->
+    <div class="flex items-center space-x-6 text-lg">
+      <% if user_signed_in? %>
+        <%= link_to 'Dashboard', dashboard_path, class: "hover:underline" %>
+        <% if current_user.is_admin? %>
+          <%= link_to 'Certificates', admin_certificates_path, class: "hover:underline" %>
+        <% elsif current_user.is_developer? %>
+          <%= link_to 'Certificates', certificates_path, class: "hover:underline" %>
+        <% end %>
+        <% if current_user.is_admin? || current_user.is_developer? %>
+          <%= link_to 'Developer Apps', developer_apps_path, class: "hover:underline" %>
+        <% end %>
+
+        <!-- User Info -->
+        <div class="flex items-center space-x-4">
+          <span class="text-sm">
+            <%= current_user.email %> 
+            (<%= current_user.is_admin? ? "Admin" : current_user.is_developer? ? "Developer" : "User" %>)
+          </span>
+          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "text-white px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700" %>
+        </div>
+      <% else %>
+        <%= link_to 'Sign In', new_user_session_path, class: "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" %>
+        <%= link_to 'Sign Up', new_user_registration_path, class: "bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600" %>
+      <% end %>
+    </div>
+  </div>
+</nav>

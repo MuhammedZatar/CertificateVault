@@ -1,0 +1,48 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <div class="space-y-6 bg-white shadow rounded-lg p-6">
+    <!-- Password Section -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">
+        Password
+        <span class="text-gray-500 text-sm">(leave blank if you don't want to change it)</span>
+      </label>
+      <%= f.password_field :password, class: "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
+        <p class="mt-1 text-sm text-gray-500">
+          <em><%= @minimum_password_length %> characters minimum</em>
+        </p>
+      <% end %>
+    </div>
+
+    <!-- Password Confirmation -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">
+        Password Confirmation
+      </label>
+      <%= f.password_field :password_confirmation, class: "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", autocomplete: "new-password" %>
+    </div>
+
+    <!-- Current Password -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700">
+        Current Password
+        <span class="text-gray-500 text-sm">(we need your current password to confirm your changes)</span>
+      </label>
+      <%= f.password_field :current_password, class: "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", autocomplete: "current-password" %>
+    </div>
+
+    <!-- Update Button -->
+    <div>
+      <%= f.submit "Update", class: "w-full inline-flex justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" %>
+    </div>
+  </div>
+<% end %>
+
+<!-- Cancel Account -->
+<div class="mt-6 bg-white shadow rounded-lg p-6">
+  <h3 class="text-lg font-medium text-gray-900">Cancel my account</h3>
+  <p class="text-sm text-gray-600 mb-4">Unhappy?</p>
+  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "w-full inline-flex justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2" %>
+</div>
+
+<%= link_to "Back", :back, class: "mt-4 inline-block text-sm text-indigo-600 hover:text-indigo-800" %>

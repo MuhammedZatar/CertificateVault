@@ -1,0 +1,33 @@
+<div class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">
+      Welcome to CertVault
+    </h1>
+    <p class="text-center text-lg text-gray-700 mb-12">
+      Manage your certificates efficiently and securely.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Certificates -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-800">Your Certificates</h2>
+        <p class="text-gray-600 mt-2">View and manage all your stored certificates in one place.</p>
+        <%= link_to 'View Certificates', certificates_path, class: "text-indigo-600 font-medium hover:underline mt-4 block" %>
+      </div>
+
+      <!-- Add Certificate -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-800">Add New Certificate</h2>
+        <p class="text-gray-600 mt-2">Securely add new certificates to your vault.</p>
+        <%= link_to 'Add Certificate', new_certificate_path, class: "text-indigo-600 font-medium hover:underline mt-4 block" %>
+      </div>
+
+      <!-- Account Settings -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-800">Account Settings</h2>
+        <p class="text-gray-600 mt-2">Manage your profile and account settings.</p>
+        <%= link_to 'Settings', edit_user_registration_path, class: "text-indigo-600 font-medium hover:underline mt-4 block" %>
+      </div>
+    </div>
+  </div>
+</div>

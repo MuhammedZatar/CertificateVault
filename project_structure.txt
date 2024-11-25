@@ -1,0 +1,157 @@
+.
+├── Gemfile
+├── Gemfile.lock
+├── Procfile.dev
+├── README.md
+├── Rakefile
+├── app
+│   ├── assets
+│   │   ├── builds
+│   │   │   └── tailwind.css
+│   │   ├── config
+│   │   │   └── manifest.js
+│   │   ├── images
+│   │   └── stylesheets
+│   │       ├── application.css
+│   │       └── application.tailwind.css
+│   ├── channels
+│   │   └── application_cable
+│   │       ├── channel.rb
+│   │       └── connection.rb
+│   ├── controllers
+│   │   ├── admin
+│   │   │   └── certificates_controller.rb
+│   │   ├── api
+│   │   │   └── v1
+│   │   ├── application_controller.rb
+│   │   ├── certificates_controller.rb
+│   │   ├── concerns
+│   │   ├── dashboard_controller.rb
+│   │   ├── pages_controller.rb
+│   │   └── users_controller.rb
+│   ├── helpers
+│   │   ├── application_helper.rb
+│   │   ├── certificates_helper.rb
+│   │   ├── dashboard_helper.rb
+│   │   └── pages_helper.rb
+│   ├── javascript
+│   │   ├── application.js
+│   │   └── controllers
+│   │       ├── hello_controller.js
+│   │       └── index.js
+│   ├── jobs
+│   │   └── application_job.rb
+│   ├── mailers
+│   │   └── application_mailer.rb
+│   ├── models
+│   │   ├── application_record.rb
+│   │   ├── certificate.rb
+│   │   ├── concerns
+│   │   └── user.rb
+│   ├── policies
+│   │   ├── application_policy.rb
+│   │   ├── certificate_policy.rb
+│   │   └── user_policy.rb
+│   └── views
+│       ├── certificates
+│       │   ├── edit.html.erb
+│       │   ├── index.html.erb
+│       │   ├── new.html.erb
+│       │   └── show.html.erb
+│       ├── dashboard
+│       │   └── index.html.erb
+│       ├── devise
+│       │   ├── confirmations
+│       │   ├── mailer
+│       │   ├── passwords
+│       │   ├── registrations
+│       │   ├── sessions
+│       │   ├── shared
+│       │   └── unlocks
+│       ├── layouts
+│       │   ├── application.html.erb
+│       │   ├── mailer.html.erb
+│       │   └── mailer.text.erb
+│       ├── pages
+│       │   └── home.html.erb
+│       └── shared
+│           └── _navbar.html.erb
+├── bin
+│   ├── dev
+│   ├── importmap
+│   ├── rails
+│   ├── rake
+│   └── setup
+├── config
+│   ├── application.rb
+│   ├── boot.rb
+│   ├── cable.yml
+│   ├── credentials.yml.enc
+│   ├── database.yml
+│   ├── environment.rb
+│   ├── environments
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   └── test.rb
+│   ├── importmap.rb
+│   ├── initializers
+│   │   ├── assets.rb
+│   │   ├── content_security_policy.rb
+│   │   ├── devise.rb
+│   │   ├── filter_parameter_logging.rb
+│   │   ├── inflections.rb
+│   │   └── permissions_policy.rb
+│   ├── locales
+│   │   ├── devise.en.yml
+│   │   └── en.yml
+│   ├── master.key
+│   ├── puma.rb
+│   ├── routes.rb
+│   └── tailwind.config.js
+├── config.ru
+├── db
+│   ├── migrate
+│   │   ├── 20241117052118_devise_create_users.rb
+│   │   ├── 20241117054352_add_admin_to_users.rb
+│   │   └── 20241117174354_create_certificates.rb
+│   ├── schema.rb
+│   └── seeds.rb
+├── lib
+│   ├── assets
+│   └── tasks
+├── log
+│   └── development.log
+├── project_structure.txt
+├── public
+│   ├── 404.html
+│   ├── 422.html
+│   ├── 500.html
+│   ├── apple-touch-icon-precomposed.png
+│   ├── apple-touch-icon.png
+│   ├── favicon.ico
+│   └── robots.txt
+├── spec
+│   ├── helpers
+│   │   └── pages_helper_spec.rb
+│   ├── requests
+│   │   └── pages_spec.rb
+│   └── views
+│       └── pages
+│           └── home.html.tailwindcss_spec.rb
+├── tmp
+│   ├── cache
+│   │   ├── assets
+│   │   │   └── sprockets
+│   │   └── bootsnap
+│   │       ├── compile-cache-iseq
+│   │       ├── compile-cache-yaml
+│   │       └── load-path-cache
+│   ├── development_secret.txt
+│   ├── pids
+│   │   └── server.pid
+│   ├── restart.txt
+│   └── sockets
+└── vendor
+    └── javascript
+
+64 directories, 91 files
