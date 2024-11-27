@@ -198,15 +198,16 @@ end
 ## Screenshots
 ### Admin Dashboard
 View certificates grouped by user email with full CRUD capabilities.
-![Screenshot 2024-11-25 at 11 18 14 AM](https://github.com/user-attachments/assets/17952ed3-74ae-4e85-b1d6-e016661bb234)
+![Admin_Dashboard](https://github.com/user-attachments/assets/3573f15a-f5be-44b6-9d4a-d179e91b20d1)
 
 
 ### Developer Applications
-![Screenshot 2024-11-25 at 11 18 38 AM](https://github.com/user-attachments/assets/05686ee9-017d-4ff3-994d-0139bde310ba)
+![Developer View](https://github.com/user-attachments/assets/b4dd239f-39e5-4db2-9545-7e5486ac0753)
+
 
 
 ### User Interface
-![Screenshot 2024-11-25 at 11 26 15 AM](https://github.com/user-attachments/assets/2fbb9af4-cf30-48aa-a995-b7922b1a4e5f)
+![User_Interface](https://github.com/user-attachments/assets/728901db-f229-417f-9966-3ce7f7e7d046)
 
 ---
 
