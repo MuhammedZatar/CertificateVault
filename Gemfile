@@ -9,6 +9,7 @@ gem "sprockets-rails" # Asset pipeline for Rails
 gem "pg", "~> 1.1" # PostgreSQL
 gem "puma", "~> 5.0" # Web server
 gem "jbuilder" # JSON APIs
+gem 'dotenv-rails', groups: %i[development test] # Environment variables
 
 # JavaScript and Styling
 gem "importmap-rails" # Importmap for JavaScript

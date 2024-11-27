@@ -51,22 +51,48 @@ CertVault is a Rails-based application designed to manage SSL/TLS certificates e
 
 1. Clone the Repository:
    ```bash
-   git clone https://github.com/MuhammedZatar/CertVault.git
-   cd CertVault
+   git clone https://github.com/MuhammedZatar/CertificateVault.git
+   cd CertificateVault
    ```
-2. Clone the Repository:
+
+2. Create a `.env` file by copying the provided `.env.example` file and updating the variables as needed:
     ```bash
-   bundle install
-   ```
-3. Setup the Database:
-   ```
-   rails db:create db:migrate
-   ```
-4. Start the Server:
-   ```
-   rails server
-   ```
-5. Visit the Application: Open your browser and navigate to http://localhost:3000
+    cp .env.example .env
+    ```
+
+3. Generate a SECRET_KEY_BASE for your application using the following command:
+   Update the .env file with your desired confiuration:
+    ```bash
+    docker-compose run --rm app bin/rails secret
+    ```
+
+    Copy the output of this command and update the `SECRETE_KEY_BASE` variable in the `.env` file:
+
+    ```bash
+    POSTGRES_DB=app_development
+    POSTGRES_USER=postgres
+    POSTGRES_PASSWORD=your_password_here
+    DATABASE_URL=postgres://postgres:your_password_here@db:5432/app_development
+    SECRET_KEY_BASE=your_generated_secret_key_here
+    ```
+
+4. Build the application and start the containers using:
+    ```bash
+    docker-compose up --build
+    ```
+
+5. If the application throws an error regarding tailwind.css being absent, run this command:
+    ```bash
+    docker-compose exec app bin/rails tailwindcss:install
+    ```
+6. After the containers are running, set up the database by running:
+    ```bash
+    docker-compose exec app bin/rails db:create
+    docker-compose exec app bin/rails db:migrate
+    ```
+7. Open your browser and navigate to http://localhost:3000 to view the application.
+
+
 
 ---
 
